@@ -1,3 +1,19 @@
+VERSION 5.00
+Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} AutoLog 
+   Caption         =   "AutoLog 1.0"
+   ClientHeight    =   10380
+   ClientLeft      =   45
+   ClientTop       =   375
+   ClientWidth     =   5955
+   OleObjectBlob   =   "AutoLog.frx":0000
+   ShowModal       =   0   'False
+   StartUpPosition =   1  'CenterOwner
+End
+Attribute VB_Name = "AutoLog"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
 Private Sub UserForm_initialize()
 
 Dim projectNum As String
@@ -248,7 +264,7 @@ ActiveCell.NumberFormat = "hh:mm"
 
 ActiveCell.Offset(0, 7) = "Seas: " & seas & "ft" & "    winds: " & winds & "kts"
 ActiveCell.Offset(1, 0).Select
-ActiveCell.Offset(0, 7) = "Baro: " & baroVal & "mb" & "    temp: " & tempVal & "Â°F" & "    vis: " & visVal & "NM"
+ActiveCell.Offset(0, 7) = "Baro: " & baroVal & "mb" & "    temp: " & tempVal & "°F" & "    vis: " & visVal & "NM"
 
 ActiveCell.Offset(1, 0).Select
 '--------------------------------------------------------
@@ -390,7 +406,7 @@ logctd.Add ctdFileName.Value & "    " & "WD = " & wDepth.Value & "m"
 
 logctd.Add "X: " & xCoord.Value & "m" & "    " & "Y: " & yCoord.Value & "m"
 
-logctd.Add "Lat: " & lat.Value & "Â°" & "    " & "Lon: " & lon.Value & "Â°"
+logctd.Add "Lat: " & lat.Value & "°" & "    " & "Lon: " & lon.Value & "°"
 
 logctd.Add "MB Depth: " & mbDepth.Value & "m" & "    " & "CTD Depth: " & ctdDepth.Value & "m"
 

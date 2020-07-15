@@ -1,0 +1,28 @@
+
+@echo off
+
+set /p jobNumber="Enter the job number:"
+
+set %jobNumber%_CarisProjects=%cd%
+
+
+mkdir %jobNumber%_CarisProjects\%jobNumber%
+mkdir %jobNumber%_CarisProjects\%jobnumber%\Background_data
+mkdir %jobNumber%_CarisProjects\%jobnumber%\backscatter
+mkdir %jobNumber%_CarisProjects\%jobnumber%\CrosslineComparison
+mkdir %jobNumber%_CarisProjects\%jobnumber%\export
+mkdir %jobNumber%_CarisProjects\%jobnumber%\Field_feature_file
+mkdir %jobNumber%_CarisProjects\%jobnumber%\HDCS_Data
+mkdir %jobNumber%_CarisProjects\%jobnumber%\Preprocess
+mkdir %jobNumber%_CarisProjects\%jobnumber%\Session
+mkdir %jobNumber%_CarisProjects\%jobnumber%\Surfaces
+mkdir %jobNumber%_CarisProjects\%jobnumber%\SVP
+mkdir %jobNumber%_CarisProjects\%jobnumber%\Tide
+
+mkdir %jobNumber%_CarisProjects\%jobnumber%\HDCS_Data\VesselConfig
+
+COPY "C:\Custom_Addons\SeaScout_Starboard_Head.hvf" "%jobNumber%_CarisProjects\%jobnumber%\HDCS_Data\VesselConfig\"
+COPY "C:\Custom_Addons\blankTide.tid" "%jobNumber%_CarisProjects\%jobnumber%\Tide\" 
+COPY "C:\Custom_Addons\zerotide.tid" "%jobNumber%_CarisProjects\%jobnumber%\Tide\"
+
+
